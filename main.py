@@ -1,15 +1,18 @@
 import pip
 
-pip.main(['install', 'dash', 'pandas', 'plotly', 'numpy', 'yellowbrick', 'sklearn'])
+pip.main(['install', 'dash', 'pandas', 'plotly', 'numpy', 'os'])
 
 from dash import Dash, dcc, html
 from dash.dependencies import Input, Output
 import pandas as pd
 import plotly.express as px
 import numpy as np
+import os
+
+current_directory = os.getcwd()
 
 app = Dash(__name__)
-data_dir = '/Users/bryceking/Desktop/home-credit-default-risk/'
+data_dir = current_directory + '/home-credit-default-risk/'
 
 tab1 = html.Div([
     html.H3('PCA'),
