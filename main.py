@@ -9,7 +9,7 @@ import plotly.express as px
 import numpy as np
 
 app = Dash(__name__)
-data_dir = '/Users/bryceking/PycharmProjects/cloud_computing_final_project/assets/home-credit-default-risk/'
+data_dir = '/Users/bryceking/Desktop/home-credit-default-risk/'
 
 tab1 = html.Div([
     html.H3('PCA'),
