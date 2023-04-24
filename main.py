@@ -12,7 +12,7 @@ import os
 current_directory = os.getcwd()
 
 app = Dash(__name__)
-data_dir = current_directory + '/home-credit-default-risk/'
+data_dir = current_directory + '/data/'
 
 tab1 = html.Div([
     html.H3('PCA'),
