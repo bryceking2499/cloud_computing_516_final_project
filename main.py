@@ -1,6 +1,6 @@
 import pip
 
-pip.main(['install', 'dash', 'pandas', 'plotly', 'numpy', 'os'])
+pip.main(['install', 'dash', 'pandas', 'plotly', 'numpy'])
 
 from dash import Dash, dcc, html
 from dash.dependencies import Input, Output
