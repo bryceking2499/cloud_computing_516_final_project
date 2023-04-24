@@ -10,9 +10,9 @@ import numpy as np
 import os
 
 current_directory = os.getcwd()
+data_dir = current_directory + '/data/'
 
 app = Dash(__name__)
-data_dir = current_directory + '/data/'
 
 tab1 = html.Div([
     html.H3('PCA'),
