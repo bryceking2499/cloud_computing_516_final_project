@@ -1,6 +1,6 @@
-import pip
-
-pip.main(['install', 'dash', 'pandas', 'plotly', 'numpy'])
+# import pip
+#
+# pip.main(['install', 'dash', 'pandas', 'plotly', 'numpy'])
 
 from dash import Dash, dcc, html
 from dash.dependencies import Input, Output
@@ -229,5 +229,5 @@ def render_feature_importance_plot(input_value):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, host='0.0.0.0', port=8050)
 app.config.suppress_callback_exceptions = True
