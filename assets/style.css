@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  
+}
+
+.html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  
+}
+
+.body {
+  background-color: #990000;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+h1, h2, h3 {
+  padding: 10px;
+  color: #EDEBEB
+}
+
+.tab {
+  Background-color: #FDF7E7 !important;
+}
+
+.tab--selected {
+  border: 0px solid #243142 !important;
+  color: #EDEBEB !important;
+  background-color: #01426A !important;
+}
+
+.Select-control {
+  background-color: #EDEBEB;
+  color: #243142;
+  margin-bottom: 30px
+  }
+  
+.Select-menu-outer {
+  background-color: #EDEBEB;
+  color: #243142;
+}
+
+.Select-value-label {
+  color: #243142;
+}
+
+.center_image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.js-plotly-plot {
+  display: block;
+  Margin-top:100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90% !important;
+}

@@ -20,7 +20,7 @@ tab1 = html.Div([
                  options=[{'label': 'Two Dimensional PCA', 'value': 2},
                           {'label': 'Three Dimensional PCA', 'value': 3}],
                  value=2),
-    html.Img(id='pca-output', style={'height': '30%', 'width': '40%'})
+    html.Img(id='pca-output', style={'height': '30%', 'width': '40%'}, className='center_image')
 ])
 
 tab2 = html.Div([
@@ -30,7 +30,7 @@ tab2 = html.Div([
                           {'label': 'Decision Tree Classifier', 'value': 'decision_tree_classifier'},
                           {'label': 'Random Forest Classifier', 'value': 'random_forest_classifier'}],
                  value='k_nearest_neighbors'),
-    html.Img(id='validation-curve-output', style={'height': '30%', 'width': '40%'})
+    html.Img(id='validation-curve-output', style={'height': '30%', 'width': '40%'}, className='center_image')
 ])
 
 tab3 = html.Div([
@@ -43,12 +43,12 @@ tab3 = html.Div([
                           {'label': 'Random Forest Classifier', 'value': 'random_forest_classifier'},
                           {'label': 'Gradient Boosting Classifier', 'value': 'gradient_boosting_classifier'}],
                  value='k_nearest_neighbors'),
-    html.Img(id='learning-curve-output', style={'height': '30%', 'width': '40%'})
+    html.Img(id='learning-curve-output', style={'height': '30%', 'width': '40%'}, className='center_image')
 ])
 
 tab4 = html.Div([
     html.H3('Elbow Plot'),
-    html.Img(src='assets/elbow_plot.png')
+    html.Img(src='assets/elbow_plot.png', style={'height': '30%', 'width': '40%'}, className='center_image')
 ])
 
 tab5 = html.Div([
@@ -59,7 +59,7 @@ tab5 = html.Div([
                           {'label': 'k = 4', 'value': '4'},
                           {'label': 'k = 5', 'value': '5'}],
                  value='2'),
-    html.Img(id='silhouette-plot-output', style={'height': '30%', 'width': '40%'})
+    html.Img(id='silhouette-plot-output', style={'height': '30%', 'width': '40%'}, className='center_image')
 ])
 
 
@@ -72,7 +72,7 @@ def render_imbalance_plot():
 
 tab6 = html.Div([
     html.H3('Class Imbalance Plot'),
-    dcc.Graph(figure=render_imbalance_plot())
+    dcc.Graph(figure=render_imbalance_plot(), style={'width': '90vh', 'height': '90vh'})
 ])
 
 # tab7 = html.Div([
@@ -109,7 +109,7 @@ outlier_columns = find_numeric()
 tab9 = html.Div([
     html.H3('Box Plot'),
     dcc.Dropdown(outlier_columns, outlier_columns[0], id='outlier-input'),
-    dcc.Graph(id='outlier-output')
+    dcc.Graph(id='outlier-output', style={'width': '90%', 'height': '90%'})
 ])
 
 
@@ -121,7 +121,7 @@ tab10 = html.Div([
                           {'label': 'Fifteen', 'value': '15'},
                           {'label': 'Thirty', 'value': '30'}],
                  value='5'),
-    html.Img(id='feature-importance-output', style={'height': '30%', 'width': '40%'})
+    html.Img(id='feature-importance-output', style={'height': '30%', 'width': '40%'}, className='center_image')
 ])
 
 app.layout = html.Div([
@@ -139,7 +139,7 @@ app.layout = html.Div([
                  dcc.Tab(label='Box Plot', value='outlier-plot', children=tab9),
                  dcc.Tab(label='Feature Importance Plot', value='feature-importance-plot', children=tab10),
              ]),
-])
+], className='body')
 
 
 def render_content(tab):
@@ -229,5 +229,5 @@ def render_feature_importance_plot(input_value):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, host='0.0.0.0', port=8050)
+    app.run_server(host='0.0.0.0', port=8050)
 app.config.suppress_callback_exceptions = True
