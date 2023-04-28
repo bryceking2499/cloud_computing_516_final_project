@@ -72,7 +72,7 @@ def render_imbalance_plot():
 
 tab6 = html.Div([
     html.H3('Class Imbalance Plot'),
-    dcc.Graph(figure=render_imbalance_plot(), style={'width': '90vh', 'height': '90vh'})
+    dcc.Graph(figure=render_imbalance_plot())
 ])
 
 # tab7 = html.Div([
@@ -109,7 +109,7 @@ outlier_columns = find_numeric()
 tab9 = html.Div([
     html.H3('Box Plot'),
     dcc.Dropdown(outlier_columns, outlier_columns[0], id='outlier-input'),
-    dcc.Graph(id='outlier-output', style={'width': '90%', 'height': '90%'})
+    dcc.Graph(id='outlier-output', style={'height': '30%', 'width': '40%'})
 ])
 
 
